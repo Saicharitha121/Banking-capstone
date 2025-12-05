@@ -5,8 +5,7 @@
 
 ### ** Goal**
 
-Set up the ingestion pipeline so that when a file lands in Azure Storage, an **Event Grid Trigger** fires an **Azure Function**, which then pushes a message into an **Azure Queue**.
-
+Stand up storage + eventing + queue + initial ingestion function so that when a file lands in storage the system triggers an Azure Function and enqueues a message
 ---
 
 ## **Step 1 — Create ADLS Gen2 (Azure Data Lake Storage Gen2)**
@@ -41,7 +40,7 @@ Azure Portal → Storage Accounts → Your Storage → Containers → `raw` → 
 
 ## **Step 3 — Deploy Event Grid Function to Azure**
 
-1. Deploy the Function App from VS Code or CLI.
+1. Deploy the Function App from VS Code .
 2. After deployment:
 
    * Event Grid trigger will appear under **Functions** in the portal.
@@ -74,7 +73,7 @@ This ensures the function runs every time a file is uploaded.
 
 ---
 
-## **Step 6 — Testing the Pipeline**
+## **Step 6 — Testing **
 
 1. Upload a file to the `raw-atm` or `raw` container.
 2. The Azure Function triggers automatically.
@@ -87,4 +86,4 @@ You should see a **JSON message** containing:
 * Blob URL
 * Event time
 
-Let me know if you want a **DAY 2 README**, an **architecture diagram**, or a **full folder structure** for GitHub!
+
