@@ -1,4 +1,4 @@
-
+<img width="1600" height="735" alt="image" src="https://github.com/user-attachments/assets/43f8cb7e-98e3-4d63-bc9d-349db530e585" />
 # **Banking Capstone Project**
 
 ## **DAY 1 — Architecture + Data Ingestion Layer**
@@ -44,6 +44,10 @@ Azure Portal → Storage Accounts → Your Storage → Containers → `raw` → 
 2. After deployment:
 
    * Event Grid trigger will appear under **Functions** in the portal.
+   <img width="1600" height="735" alt="image" src="https://github.com/user-attachments/assets/e958e858-605c-4fe9-af44-b75728a1cbde" />
+
+
+   
 3. Add **Application Settings** in the Function App:
 
    * `AzureWebJobsStorage` → Storage account connection string
@@ -80,6 +84,9 @@ This ensures the function runs every time a file is uploaded.
 3. Check the queue:
 
    Storage Account → Queues → `ingestion-queue` → **Peek Messages**
+
+   <img width="1600" height="774" alt="image" src="https://github.com/user-attachments/assets/cf495420-9b40-4eec-acad-10a3e3f51e04" />
+
 
 You should see a **JSON message** containing:
 
