@@ -1,4 +1,4 @@
-<img width="1600" height="735" alt="image" src="https://github.com/user-attachments/assets/43f8cb7e-98e3-4d63-bc9d-349db530e585" />
+
 # **Banking Capstone Project**
 
 ## **DAY 1 — Architecture + Data Ingestion Layer**
