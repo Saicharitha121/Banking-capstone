@@ -128,7 +128,8 @@ Before starting Day2 : check these validations
 3) Cosmos DB Container stores the validated data but unable to see the messages in the DB 
 
 
-<img width="696" height="878" alt="image" src="https://github.com/user-attachments/assets/f0ef691e-9653-479a-a298-6d1d8e699bfb" />
+<img width="1919" height="971" alt="image" src="https://github.com/user-attachments/assets/7733db7a-2eb5-4ae1-8349-36afbfb224dd" />
+
 
 
 
