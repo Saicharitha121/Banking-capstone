@@ -146,7 +146,7 @@ After the Data got inserted into cosmosDB then the processed data is transformed
 
 
 
-Bronze Layer is nothing but the raw layer ( which is before the tranformation )
+### ** Bronze Layer is nothing but the raw layer ( which is before the tranformation )
 
 
 
@@ -158,7 +158,7 @@ Bronze Layer is nothing but the raw layer ( which is before the tranformation )
 <img width="1196" height="921" alt="image" src="https://github.com/user-attachments/assets/fedfe593-5c87-4245-ac71-edce092674f7" />
 
 
-Silver layer Data :
+### **Silver layer Data :
 
 
 
@@ -177,7 +177,7 @@ Silver layer Data :
 <img width="1600" height="817" alt="image" src="https://github.com/user-attachments/assets/bc3fae9f-e5ef-4afc-80a5-0ec3e5a1adf7" />
 
 
-Gold layer Data
+### **Gold layer Data
 
 
 
@@ -203,7 +203,7 @@ Gold layer Data
 
 
 -----------------------------------------------------------------------------------------------------------
-### **DAY 3: --
+### **DAY 3: -- ** Data Warehouse**
 
 1. **Dimensional Model (Star Schema)** : ---
 
@@ -211,19 +211,19 @@ The final dimensional model created for the Banking Analytics Warehouse.
 
 The model follows a Star Schema optimized for BI, reporting, and fraud analytics.
 
-Included Dimensions:
+Included Dimensions:-----
 
 * DimCustomer – SCD Type 2 with historical tracking
 
-*DimAccount – Customer accounts and status
+* DimAccount – Customer accounts and status
 
-*DimBranch – ATM/Branch/UPI device locations
+* DimBranch – ATM/Branch/UPI device locations
 
-*DimProduct – Loan / Savings / Current account type mapping
+* DimProduct – Loan / Savings / Current account type mapping
 
-*DimDate – Calendar table used for time-series reporting
+* DimDate – Calendar table used for time-series reporting
 
-**Included Fact Tables:
+**Included Fact Tables:------
 
 *FactTransactions – All ATM + UPI transaction details
 
@@ -263,7 +263,7 @@ Included Dimensions:
 
 -    Dimensions loaded using INSERT + MERGE logic
 
--   Fact tables Analyzed with UPSERT/MERGE strategies
+-    Fact tables Analyzed with UPSERT/MERGE strategies
 
 ( The code has been given in the folder Pyspark_ETL_Jobs which is successfully executed using MERGE/UPSERT operations to efficiently load and update dimension and fact tables in the SQL Data Warehouse. ) 
 
@@ -278,7 +278,7 @@ The following screenshot show the automated data synchronization processes imple
 
 ---------------------------------------------------------------------------------------------------------------------------
 
-### *** Day 4:  Real-Time Alerts 
+### *** Day 4:  Real-Time Alerts ***
 
 **This module focuses on enabling real-time detection and alerting for suspicious banking activities. Whenever a high-value or unusual transaction flows into the system, the event-driven architecture immediately evaluates it and triggers alerts if required.
 
@@ -290,17 +290,18 @@ The following screenshot show the automated data synchronization processes imple
 --If the transaction qualifies as suspicious, an alert entry is created in the FraudAlerts container in Cosmos DB.
 
 
+
 **The following output Says: ---
 
-*Realtime event arrival in Event Grid
+* Realtime event arrival in Event Grid
 
-*Execution status of the Event Grid Trigger Azure Function
+* Execution status of the Event Grid Trigger Azure Function
 
-*Anomaly detection logs and flagged events
+* Anomaly detection logs and flagged events
 
-*Newly inserted fraud records in Cosmos DB (FraudAlerts)
+* Newly inserted fraud records in Cosmos DB (FraudAlerts)
 
-*Notification triggers sent via Service Bus Queue/Topic
+*  Notification triggers sent via Service Bus Queue/Topic
 
 
 <img width="1600" height="882" alt="image" src="https://github.com/user-attachments/assets/0116abd9-4216-464d-8a24-6f2463eca897" />
@@ -308,27 +309,33 @@ The following screenshot show the automated data synchronization processes imple
 
 -------------------------------------------------------------------------------------------
 
-## ** Day 5 : -- Power BI Reporting 
+## ** Day 5 : -- Power BI Reporting **
 
 **This phase focuses on building a complete BI and analytics layer on top of the SQL Data Warehouse. Power BI is connected directly to the SQL Server database to visualize business insights across operations, customer behavior, fraud patterns, and compliance needs.
+
+
 
 *Report Working :
 
  - Power BI connects to the Azure SQL Data Warehouse as its primary data source.
 
- - According to the creation of the dashboards creating some relationships like 
+ - According to the creation of the dashboards creating some relationships like
 
- *DimCustomer     -  FactTransactions   - CustomerSK = CustomerSK        
+   
+
+ * DimCustomer     -  FactTransactions   - CustomerSK = CustomerSK        
  
- *DimCustomer     - FactFraudDetection  - CustomerSK = CustomerSK                 
+ * DimCustomer     - FactFraudDetection  - CustomerSK = CustomerSK                 
  
- *DimDate         - FactTransactions    - DateSK = TransactionDateSK (calculated) 
+ * DimDate         - FactTransactions    - DateSK = TransactionDateSK (calculated) 
  
  * DimDate         -  FactFraudDetection - DateSK = AlertDateSK (calculated)       
  
  * DimProduct      -  FactTransactions   -  ProductType = TransactionType           
  
  * DimBranch       -  FactTransactions   -  BranchName = Source                     
+
+
 
 _  After creating the realtionships creating the visuals based on the fact transcations data 
 
@@ -343,6 +350,8 @@ _  After creating the realtionships creating the visuals based on the fact trans
 
 ** This dashboard provides a complete view of daily banking transaction activity across all channels and branches.
 It helps business teams monitor transaction volume, customer behavior, and branch-wise activity patterns.
+
+
 
 Key points of visualization : ---
 
