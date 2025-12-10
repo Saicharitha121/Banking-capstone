@@ -127,8 +127,8 @@ Before starting Day2 : check these validations
 
 3) Cosmos DB Container stores the validated data and inserted rows will appear in the cosmos DB 
 
-
-<img width="1919" height="971" alt="image" src="https://github.com/user-attachments/assets/7733db7a-2eb5-4ae1-8349-36afbfb224dd" />
+Transcations records rows are inserted into the cosmos after 
+4) 
 
 
 
