@@ -127,8 +127,49 @@ Before starting Day2 : check these validations
 
 3) Cosmos DB Container stores the validated data and inserted rows will appear in the cosmos DB 
 
-Transcations records rows are inserted into the cosmos after 
-4) 
+Transcations records rows are inserted into the cosmos 
+<img width="1600" height="782" alt="image" src="https://github.com/user-attachments/assets/45774e9c-6fb7-4023-bc65-8fb9a2692dee" />
+
+
+UPI Event records are inserted into the cosmos
+
+<img width="1600" height="781" alt="image" src="https://github.com/user-attachments/assets/7da41db7-51c0-40d0-95d8-1ffd5e0e4d8f" />
+
+<img width="1600" height="773" alt="image" src="https://github.com/user-attachments/assets/7493936c-8987-4e85-912c-9776a230fd03" />
+
+
+PySpark Data Clean Pipeline : 
+
+After the Data got inserted into cosmosDB then the processed data is transformed into the Bronze, silver, Gold Delta layers using the pyspark Framework (code is given in the Pyspark_Dataclean_pipeline) 
+
+<img width="1218" height="943" alt="image" src="https://github.com/user-attachments/assets/8285bf48-8adc-4e66-b914-8e5c21773958" />
+
+Bronze Layer is nothing but the raw layer ( which is before the tranformation )
+
+<img width="1218" height="943" alt="image" src="https://github.com/user-attachments/assets/2012fcc7-eff7-4903-a2fc-56a898a16c41" />
+
+<img width="1198" height="925" alt="image" src="https://github.com/user-attachments/assets/a6e426c9-e08d-4427-9403-e576771a32b9" />
+
+
+<img width="1196" height="921" alt="image" src="https://github.com/user-attachments/assets/fedfe593-5c87-4245-ac71-edce092674f7" />
+
+
+Silver layer Data :
+
+
+<img width="1218" height="943" alt="image" src="https://github.com/user-attachments/assets/aa99d00d-7f7a-4b7f-872b-76fe825266a1" />
+
+
+
+<img width="1600" height="811" alt="image" src="https://github.com/user-attachments/assets/1e33d0d8-8ca6-477e-838e-eec81653f891" />
+
+
+
+<img width="1600" height="808" alt="image" src="https://github.com/user-attachments/assets/7f5311a6-9e44-45b9-a17b-0a470cdde073" />
+
+
+
+<img width="1600" height="817" alt="image" src="https://github.com/user-attachments/assets/bc3fae9f-e5ef-4afc-80a5-0ec3e5a1adf7" />
 
 
 
