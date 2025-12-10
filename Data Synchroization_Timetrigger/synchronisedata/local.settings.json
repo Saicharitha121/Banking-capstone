@@ -1,0 +1,13 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "FUNCTIONS_WORKER_RUNTIME": "python",
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    
+    "ADLS_SAS_TOKEN": "sv=2024-11-04&ss=bfqt&srt=sco&sp=rwdlacupyx&se=2025-12-09T14:11:41Z&st=2025-12-09T05:56:41Z&spr=https&sig=ULKbIFygtqazKhG1N%2BV4bCMHvd2th5cVdAhvyRt9Wds%3D",
+    
+    "SQL_JDBC_URL": "jdbc:sqlserver://sam4server.database.windows.net:1433;database=samdatabase;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;",
+    "SQL_USER": "samanth",
+    "SQL_PASSWORD": "Bunty5550#"
+  }
+}
